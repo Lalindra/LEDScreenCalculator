@@ -4,9 +4,8 @@ function greeting() {
 }
 
 
-
 // Single cube draw and display
-function drawRectangle(cubeWidth, cubeHeight) {
+function drawCube(cubeWidth, cubeHeight) {
     // Get elements of Draw canvas and Parent
     const canvas = document.getElementById("cube-container");
     const canvasCube = document.getElementById("cubeCanvas");
@@ -91,6 +90,15 @@ function drawWall(wallWidth, wallHeight) {
 }
 
 // function calls
-drawRectangle(100, 200);
+
+drawCube(100, 200);
 drawWall(400,200);
 
+function resize(){
+    console.log("width: " + window.innerWidth);
+    console.log("height" + window.innerHeight);
+    drawCube(100,200);
+    drawWall(400,200);
+}
+
+window.onresize = resize;
