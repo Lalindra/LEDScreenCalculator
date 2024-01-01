@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+    <title>LED Screen Size Calculator by VAEG</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+    <div class="header-block">
+        <h1>LED SCREEN SIZE CALCULATOR</h1>
+    </div>
+
+    <br>
+
+    <div class="double-container">
+
+        <div class="small-container">
+
+            <div class="sub-header-block">
+
+                <span class="sub-heading">Cube (Panel) Details</span>    
+
+            </div>
+
+            <div class="table-container">
+
+                <table class="table-style">
+                    <tr>
+                        <td>Physical Width of Cube (in mm)</td>
+                        <td>
+                            <select class="value-drop" id="cube-width">
+                                <option class="drop-content" value=82>500</option>
+                                <option class="drop-content" value=96>512</option>
+                                <option class="drop-content" value=128>1000</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Physical Height of Cube (in mm)</td>
+                        <td>
+                            <select class="value-drop" id="cube-height">
+                                <option class="drop-content" value=82>500</option>
+                                <option class="drop-content" value=96>512</option>
+                                <option class="drop-content" value=128>1000</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal Resolution of Cube (Pixels)</td>
+                        <td> 
+                            <select class="value-drop" id="h-res-cube">
+                                <option class="drop-content" value=82>86</option>
+                                <option class="drop-content" value=96>96</option>
+                                <option class="drop-content" value=128>128</option>
+                                <option class="drop-content" value=256>256</option>
+                                <option class="drop-content" value=1024>1024</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vertical Resolution of Cube (Pixels)</td>
+                        <td>
+                            <select class="value-drop" id="v-res-cube">
+                                <option class="drop-content" value=82>86</option>
+                                <option class="drop-content" value=96>96</option>
+                                <option class="drop-content" value=128>128</option>
+                                <option class="drop-content" value=256>256</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Cubes Horizontal</td>
+                        <td>
+                            <input maxlength="3" class="value-input" id="num-cubes"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Cubes Vertical</td>
+                        <td>
+                            <input maxlenght="3" class="value-input" id="num-cubes"></input>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+        <div class="small-container">
+
+            <div class="sub-header-block">
+
+                <span class="sub-heading">LED Cube Articulation</span>    
+
+            </div>
+
+            <div class="table-container" id="cube-container">
+
+                <canvas id="cubeCanvas" height="300" ></canvas>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <br>
+
+    <div class="double-container">
+
+        <div class="small-container">
+
+            <div class="sub-header-block">
+
+                <span class="sub-heading">Screen (Wall) Details</span>    
+
+            </div>
+
+            <div class="table-container">
+
+                <table class="table-style">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <span>meters</span>
+                        </td>
+                        <td>
+                            <span>feet</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Width of LED wall</td>
+                        <td class="value-display">
+                            <div class="value-input">&nbsp;</div>
+                        </td>
+                        <td class="value-display">
+                            <div class="value-input">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Height of LED wall</td>
+                        <td class="value-display">
+                            <div class="value-input">&nbsp;</div>
+                        </td>
+                        <td class="value-display">
+                            <div class="value-input">&nbsp;</div>
+                        </td>
+                    </tr>
+                    </table>
+
+                <table>
+                    <tr>
+                        <td> Total Horizontal Resolution (pixels)</td>
+                        <td class="value-display">
+                            <div class="value-input">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Total Vertical Resolution in (Pixels)</td>
+                        <td class="value-display">
+                            <div class="value-input">&nbsp;</div>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="small-container">
+
+            <div class="sub-header-block">
+
+                <span class="sub-heading">LED Screen Articulation</span>    
+
+            </div>
+
+            <div class="table-container" ID="wall-container">
+
+                <canvas ID="wallCanvas" height="300"></canvas>
+
+            </div>
+
+        </div>
+    </div>
+
+<br>
+
+<div>
+    <span id="footer">By Cyber Illusions - A Part of <a href="http://www.behance.net/vaeg">The Visual Art and Experiences Group</a></span>
+</div>
+
+
+</body>
+
+<script src="scripts/script.js"></script>
+
+</html>
